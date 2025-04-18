@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.8s ease;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin: 0 20px 40px;
+  }
+
+  .palette {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .color {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid white;
+    transition: transform 0.3s ease;
+  }
+
+  .color:hover {
+    transform: scale(1.1);
+  }
+
+  .blue { background-color: #3b82f6; }
+  .red { background-color: #ef4444; }
+  .yellow { background-color: #facc15; }
+  .green { background-color: #22c55e; }
+  .purple { background-color: #a855f7; }
+
+  .cycle-hint {
+    font-size: 1rem;
+    opacity: 0.7;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 0 1rem;
+    display: none;
+  }
+  
+  .image-grid img {
+    width: 100%;
+    height: 200px; /* Or whatever fixed height looks good */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  

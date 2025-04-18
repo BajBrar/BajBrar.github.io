@@ -2,168 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Palette of Me</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      transition: background-color 0.8s ease;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      max-width: 500px;
-      margin: 0 20px 40px;
-    }
-
-    .palette {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .color {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      cursor: pointer;
-      border: 3px solid white;
-      transition: transform 0.3s ease;
-    }
-
-    .color:hover {
-      transform: scale(1.1);
-    }
-
-    .blue { background-color: #3b82f6; }
-    .red { background-color: #ef4444; }
-    .yellow { background-color: #facc15; }
-    .green { background-color: #22c55e; }
-    .purple { background-color: #a855f7; }
-
-    .cycle-hint {
-      font-size: 1rem;
-      opacity: 0.7;
-    }
-
-    audio {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="/Assignment2/style.css">
+  <script src="/Assignment2/style.js" defer></script>
+  <title>Palette of Nature</title>
 </head>
 <body>
 
-  <h1 id="mood-title">Pick a Color</h1>
-  <p id="mood-text">Click a color or press space to see a different side of me.</p>
+  <h1 id="mood-title">Pick a Scene</h1>
+  <p id="mood-text">Click a color or press space to explore a different world.</p>
 
   <div class="palette">
-    <div class="color blue" data-mood="calm"></div>
-    <div class="color red" data-mood="passion"></div>
-    <div class="color yellow" data-mood="joy"></div>
-    <div class="color green" data-mood="nostalgia"></div>
-    <div class="color purple" data-mood="dream"></div>
+    <div class="color blue" data-scene="ocean"></div>
+    <div class="color red" data-scene="fire"></div>
+    <div class="color yellow" data-scene="sunlight"></div>
+    <div class="color green" data-scene="forest"></div>
+    <div class="color purple" data-scene="galaxy"></div>
   </div>
 
-  <p class="cycle-hint">🎹 Press Space to Cycle Through Moods</p>
+  <p class="cycle-hint">🌍 Press Space to Explore</p>
 
-  <!-- Optional audio -->
-  <audio id="audio-calm" src="calm.mp3" loop></audio>
-  <audio id="audio-passion" src="passion.mp3" loop></audio>
-  <audio id="audio-joy" src="joy.mp3" loop></audio>
-  <audio id="audio-nostalgia" src="nostalgia.mp3" loop></audio>
-  <audio id="audio-dream" src="dream.mp3" loop></audio>
-
-  <script>
-    const moods = {
-      calm: {
-        color: '#3b82f6',
-        title: 'Calm',
-        text: "This is me when I'm calm—quiet, grounded, and centered.",
-        audio: 'audio-calm'
-      },
-      passion: {
-        color: '#ef4444',
-        title: 'Passion',
-        text: "This is me when I'm fired up—bold, driven, and intense.",
-        audio: 'audio-passion'
-      },
-      joy: {
-        color: '#facc15',
-        title: 'Joy',
-        text: "This is me when I'm joyful—playful, light, and full of life.",
-        audio: 'audio-joy'
-      },
-      nostalgia: {
-        color: '#22c55e',
-        title: 'Nostalgia',
-        text: "This is me in reflection—looking back with warmth.",
-        audio: 'audio-nostalgia'
-      },
-      dream: {
-        color: '#a855f7',
-        title: 'Dream',
-        text: "This is me dreaming—imaginative, distant, and hopeful.",
-        audio: 'audio-dream'
-      }
-    };
-
-    const moodOrder = ['calm', 'passion', 'joy', 'nostalgia', 'dream'];
-    let currentMoodIndex = -1;
-
-    const title = document.getElementById('mood-title');
-    const text = document.getElementById('mood-text');
-    const colors = document.querySelectorAll('.color');
-    let currentAudio = null;
-
-    function applyMood(mood) {
-      const setting = moods[mood];
-      document.body.style.backgroundColor = setting.color;
-      title.textContent = setting.title;
-      text.textContent = setting.text;
-
-      // Stop previous audio
-      if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-      }
-
-      currentAudio = document.getElementById(setting.audio);
-      if (currentAudio) {
-        currentAudio.play();
-      }
-    }
-
-    // Click interaction
-    colors.forEach(color => {
-      color.addEventListener('click', () => {
-        const mood = color.getAttribute('data-mood');
-        currentMoodIndex = moodOrder.indexOf(mood);
-        applyMood(mood);
-      });
-    });
-
-    // Spacebar to cycle moods
-    document.addEventListener('keydown', (e) => {
-      if (e.code === 'Space') {
-        e.preventDefault();
-        currentMoodIndex = (currentMoodIndex + 1) % moodOrder.length;
-        applyMood(moodOrder[currentMoodIndex]);
-      }
-    });
-  </script>
+  <div class="image-grid">
+    <img id="img1" src="" alt="">
+    <img id="img2" src="" alt="">
+    <img id="img3" src="" alt="">
+  </div>
+  
 
 </body>
 </html>
