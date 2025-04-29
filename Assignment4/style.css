@@ -1,6 +1,7 @@
 body {
-    background-color: #f1f5f2; /* soft light earthy green */
+    background: linear-gradient(to bottom, #A3D2CA, #5C6A75);
     font-family: 'Raleway', sans-serif;
+    color: #333;
   }
   
   .center-screen {
@@ -14,17 +15,74 @@ body {
   }
   
   .instruction {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0;
+  }
+  
+  .card {
+    border-radius: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4A4A4A;
   }
   
   .fade-in {
-    animation: fadeIn 2s ease;
+    animation: fadeIn 1.5s ease;
   }
   
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
   }
+  
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-success {
+    background-color: #2D9F6E;
+    border-color: #2D9F6E;
+  }
+  
+  .btn-primary {
+    background-color: #0E71C1;
+    border-color: #0E71C1;
+  }
+  
+  .progress-bar {
+    background-color: #56CCF2;
+  }
+  
+  .progress-bar-striped {
+    animation: progress-animation 10s linear infinite;
+  }
+  
+  @keyframes progress-animation {
+    0% { width: 0%; }
+    50% { width: 50%; }
+    100% { width: 100%; }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 90%;
+    }
+  
+    .instruction {
+      font-size: 1.2rem;
+    }
+  }
+  
   
