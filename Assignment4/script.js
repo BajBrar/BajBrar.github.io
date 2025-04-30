@@ -2,7 +2,7 @@ const instructions = [
     "Sit comfortably. Relax your hands and body",
     "Inhale through your nose. Exhale through your mouth.",
     "Close your eyes for a moment. Listen to the sounds around you",
-    "Feel the support of the ground under you.",
+    "Feel the support of the logs under you.",
     "Inhale slowly. Count to 4. Exhale slowly. Count to 4.",
     "Inhale again. Feel the breath fill your ribs. Exhale gently.",
     "Take one last full breath. Hold. Release."
@@ -21,6 +21,13 @@ const instructions = [
   
   function showInstruction() {
     const instructionText = document.getElementById('instruction-text');
+    const body = document.getElementById('main-body');
+    body.classList.remove(
+        "gradient-welcome",
+        "gradient-1", "gradient-2", "gradient-3",
+        "gradient-4", "gradient-5", "gradient-6", "gradient-7"
+    );
+    body.classList.add(`gradient-${currentInstruction + 1}`);
     instructionText.classList.remove('fade-in');
     void instructionText.offsetWidth;
     instructionText.classList.add('fade-in');
@@ -38,7 +45,7 @@ const instructions = [
   function startTimer() {
     instructionTimer = setInterval(() => {
       nextInstruction();
-    }, 10000); // 10 seconds per prompt
+    }, 10000); 
   }
   
   function nextInstruction() {
@@ -49,7 +56,7 @@ const instructions = [
       endJourney();
     }
   }
-  
+
   function endJourney() {
     clearInterval(instructionTimer);
     document.getElementById('instruction-screen').classList.add('d-none');

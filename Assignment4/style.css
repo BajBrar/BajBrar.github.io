@@ -1,5 +1,4 @@
 body {
-    background: linear-gradient(to bottom, #A3D2CA, #5C6A75);
     font-family: 'Raleway', sans-serif;
     color: #333;
   }
@@ -84,5 +83,39 @@ body {
       font-size: 1.2rem;
     }
   }
+
+  .gradient-1 {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  }
+  
+  .gradient-2 {
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  }
+  
+  .gradient-3 {
+    background: linear-gradient(to right, #fddb92, #d1fdff);
+  }
+  
+  .gradient-4 {
+    background: linear-gradient(to right, #fceabb, #f8b500);
+  }
+  
+  .gradient-5 {
+    background: linear-gradient(to right, #d4fc79, #96e6a1);
+  }
+  
+  .gradient-6 {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+  }
+  
+  .gradient-7 {
+    background: linear-gradient(to right, #a18cd1, #fbc2eb);
+  }
+  
+  .gradient-welcome {
+    background: linear-gradient(to right, #121212, #2c3e50); 
+    color: white;
+  }
+  
   
   
