@@ -1,0 +1,158 @@
+/* Reset & Base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%); */
+    color: #d4f8f6;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(120deg, #ff6f61, #ff9472);
+    color: white;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Intro Text */
+  .intro {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #4a2e2e;
+    padding: 0 1rem;
+  }
+  
+  /* Filters */
+  .filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  
+  select {
+    padding: 0.7rem 1rem;
+    border: 2px solid #ff9472;
+    border-radius: 12px;
+    background-color: #fff8f2;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #ff6f61;
+    box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.3);
+  }
+  
+  /* Book Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Book Cards */
+  .book {
+    background: #ffffff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .book a img:hover {
+    transform: scale(1.05);
+  }
+  
+  .book h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .book h2 a {
+    text-decoration: none;
+    color: #ff6f61;
+    transition: color 0.3s;
+  }
+  
+  .book h2 a:hover {
+    color: #d84339;
+  }
+  
+  .book p {
+    font-size: 0.95rem;
+    margin: 0.3rem 0;
+    color: #444;
+  }
+  
+  /* Show More / Less Button */
+  .toggle-btn {
+    margin-top: 0.75rem;
+    background-color: #ff9472;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #ff6f61;
+  }
+  
+  .more-text {
+    display: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    .intro {
+      font-size: 1rem;
+    }
+  
+    select {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
