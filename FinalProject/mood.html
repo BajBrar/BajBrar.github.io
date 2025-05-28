@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mood-Based Music Recommender</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">MoodVibes</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="mood.html">Mood Picker</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1>Mood-Based Music Recommender</h1>
+
+  <div class="buttons">
+    <button onclick="setMood('happy')">Happy</button>
+    <button onclick="setMood('sad')">Sad</button>
+    <button onclick="setMood('energetic')"> Energetic</button>
+    <button onclick="setMood('relaxed')"> Relaxed</button>
+  </div>
+
+  <div id="player-container">
+    <p>Select a mood to see a playlist.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 MoodVibes. Built by Baj Brar.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

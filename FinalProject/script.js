@@ -16,3 +16,16 @@ function setMood(mood) {
   `;
   document.getElementById('player-container').innerHTML = player;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const ctaButton = document.querySelector(".cta-button");
+
+  if (ctaButton) {
+    ctaButton.addEventListener("click", () => {
+      ctaButton.classList.add("clicked");
+      setTimeout(() => ctaButton.classList.remove("clicked"), 300);
+    });
+  }
+
+  console.log("Welcome to MoodVibes!");
+});

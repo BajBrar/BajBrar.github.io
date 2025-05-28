@@ -1,24 +1,165 @@
+/* Reset + Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Footer */
+footer {
+  background-color: #6c63ff;
   text-align: center;
-  background-color: #f0f4f8;
   padding: 20px;
+  font-size: 0.9rem;
+  color: #dcdcdc;
+  margin-top: auto;
 }
 
-.buttons {
+/* Header and Navigation */
+header {
+  background-color: #6c63ff;
+  padding: 20px 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #dcdcdc;
+}
+
+/* Hero Section */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
   margin-bottom: 20px;
+  color: #574fd6;;
 }
 
-button {
-  margin: 5px;
-  padding: 12px 20px;
-  font-size: 1rem;
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  color: #574fd6;
+}
+
+.cta-button {
+  background-color: #6c63ff;
+  color: white;
+  padding: 15px 30px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #574fd6;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #6c63ff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #dcdcdc;
+}
+
+/* the Mood part styles */
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #6c63ff;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #574fd6;
+  transform: translateY(-2px);
 }
 
 #player-container {
-  margin-top: 20px;
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+iframe {
+  border-radius: 12px;
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #574fd6;;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  color: #574fd6;
 }
