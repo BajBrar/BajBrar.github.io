@@ -1,4 +1,4 @@
-/* Reset + Base styles */
+/* ========== Reset & Base ========== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,27 +7,40 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
   color: #333;
+  background: linear-gradient(to right, #f2e9e4, #e8dcdc);
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
-/* Footer */
-footer {
-  background-color: #6c63ff;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #dcdcdc;
-  margin-top: auto;
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #574fd6;
 }
 
-/* Header and Navigation */
+/* ========== Canvas Background ========== */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* ========== Header & Navigation ========== */
 header {
-  background-color: #6c63ff;
-  padding: 20px 40px;
+  background: linear-gradient(to right, #6c63ff, #574fd6);
+  padding: 1rem 2rem;
+  color: white;
+  position: relative;
+  z-index: 1;
 }
 
 nav {
@@ -39,46 +52,45 @@ nav {
 }
 
 .logo {
-  color: white;
   font-size: 1.5rem;
   font-weight: 600;
+  color: white;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li a {
+.nav-links a {
   color: white;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
+.nav-links a:hover {
   color: #dcdcdc;
+  text-decoration: underline;
 }
 
-/* Hero Section */
+/* ========== Hero Section ========== */
 main {
   flex: 1;
+  padding: 60px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
   text-align: center;
 }
 
 .hero {
   max-width: 700px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #574fd6;;
 }
 
 .hero p {
@@ -104,16 +116,19 @@ main {
   transform: scale(1.05);
 }
 
-/* Footer */
+/* ========== Footer ========== */
 footer {
   background-color: #6c63ff;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
   color: #dcdcdc;
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
 }
 
-/* the Mood part styles */
+/* ========== Mood Buttons & Player ========== */
 .buttons {
   display: flex;
   justify-content: center;
@@ -121,6 +136,7 @@ footer {
   gap: 15px;
   margin-bottom: 40px;
 }
+
 button {
   padding: 15px 30px;
   font-size: 1.1rem;
@@ -129,7 +145,7 @@ button {
   background-color: #6c63ff;
   color: white;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -149,17 +165,133 @@ button:hover {
   margin-left: auto;
   margin-right: auto;
 }
+
 iframe {
   border-radius: 12px;
 }
-h1 {
-  font-size: 3rem;
-  margin-bottom: 30px;
-  color: #574fd6;;
+
+/* ========== About Page ========== */
+.about-section {
+  flex: 1;
+  padding: 80px 20px;
+  backdrop-filter: blur(8px);
 }
-body {
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
   color: #574fd6;
+  margin-bottom: 20px;
 }
+
+.about-section h1 .highlight {
+  color: #6c63ff;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  color: #574fd6;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* ========== Contact Form ========== */
+.contact-container {
+  max-width: 600px;
+  margin: 4rem auto;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #6c63ff, #574fd6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.contact-container p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background: #6c63ff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #574fd6;
+  transform: scale(1.02);
+}
+
+#form-response {
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #f2e9e4, #e8dcdc); 
+  pointer-events: none;
+}
+

@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Particle Container -->
-<div id="particles-js"></div>
+  <div id="particles-js"></div>
   <header>
     <nav>
       <div class="logo">MoodVibes</div>
@@ -23,17 +22,27 @@
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Welcome to MoodVibes</h1>
-      <p>Discover personalized playlists based on your current mood. Whether you're feeling happy, sad, energetic, or relaxed, we've got the perfect tunes for you.</p>
-      <a href="mood.html" class="cta-button">Choose Your Mood 🎧</a>
-    </section>
+    <div class="contact-container">
+      <h1>Contact Me</h1>
+      <p>Have feedback or want me to add new songs? I'd love to hear from you!</p>
+  
+      <form action="https://formspree.io/f/xjkrvvgl" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="form-response" class="hidden">Thanks! Your message was sent. 😊</div>
+      
+  
+    
   </main>
+  
+  </main>  
 
   <footer>
     <p>&copy; 2025 MoodVibes. Built by Baj Brar.</p>
   </footer>
-  <!-- Particles.js library -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>  
   <script src="script.js"></script>
 </body>

@@ -18,8 +18,10 @@ function setMood(mood) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const ctaButton = document.querySelector(".cta-button");
+  console.log("Welcome to MoodVibes!");
 
+  // CTA button animation
+  const ctaButton = document.querySelector(".cta-button");
   if (ctaButton) {
     ctaButton.addEventListener("click", () => {
       ctaButton.classList.add("clicked");
@@ -27,5 +29,68 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  console.log("Welcome to MoodVibes!");
+  // Contact form submission handler
+  const contactForm = document.querySelector(".contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      });
+
+      if (response.ok) {
+        form.reset();
+        const formResponse = document.getElementById("form-response");
+        if (formResponse) {
+          formResponse.classList.remove("hidden");
+        }
+      } else {
+        alert("Oops! Something went wrong. Try again later.");
+      }
+    });
+  }
+
+  // Initialize particles.js
+  if (typeof particlesJS === "function") {
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 50, density: { enable: true, value_area: 300 } },
+        color: { value: "#6c63ff" }, // your header color
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" }
+        },
+        opacity: {
+          value: 0.8,
+          random: true,
+          anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
+        },
+        size: {
+          value: 15,
+          random: true,
+          anim: { enable: true, speed: 2, size_min: 5, sync: false }
+        },
+        line_linked: { enable: false },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false }
+        }
+      },
+      interactivity: {
+        events: { onhover: { enable: false }, onclick: { enable: false } }
+      },
+      retina_detect: true
+    });
+  } else {
+    console.warn("particlesJS is not loaded.");
+  }
 });
