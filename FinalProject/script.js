@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     particlesJS("particles-js", {
       particles: {
         number: { value: 50, density: { enable: true, value_area: 300 } },
-        color: { value: "#6c63ff" }, // your header color
+        color: { value: "#4256dd" }, // your header color
         shape: {
           type: "circle",
           stroke: { width: 0, color: "#000000" }

@@ -20,7 +20,7 @@ body {
 h1 {
   font-size: 3rem;
   margin-bottom: 30px;
-  color: #574fd6;
+  color: #4256dd;
 }
 
 /* ========== Canvas Background ========== */
@@ -36,7 +36,7 @@ h1 {
 
 /* ========== Header & Navigation ========== */
 header {
-  background: linear-gradient(to right, #6c63ff, #574fd6);
+  background: #4256dd;
   padding: 1rem 2rem;
   color: white;
   position: relative;
@@ -96,11 +96,11 @@ main {
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 40px;
-  color: #574fd6;
+  color: #4256dd;
 }
 
 .cta-button {
-  background-color: #6c63ff;
+  background-color: #4256dd;
   color: white;
   padding: 15px 30px;
   border: none;
@@ -112,13 +112,13 @@ main {
 }
 
 .cta-button:hover {
-  background-color: #574fd6;
+  background-color: #4256dd;
   transform: scale(1.05);
 }
 
 /* ========== Footer ========== */
 footer {
-  background-color: #6c63ff;
+  background-color: #4256dd;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
@@ -142,7 +142,7 @@ button {
   font-size: 1.1rem;
   border: none;
   border-radius: 12px;
-  background-color: #6c63ff;
+  background-color: #4256dd;
   color: white;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -150,7 +150,7 @@ button {
 }
 
 button:hover {
-  background-color: #574fd6;
+  background-color: #4256dd;
   transform: translateY(-2px);
 }
 
@@ -189,17 +189,17 @@ iframe {
 
 .about-section h1 {
   font-size: 2.5rem;
-  color: #574fd6;
+  color: #4256dd;
   margin-bottom: 20px;
 }
 
 .about-section h1 .highlight {
-  color: #6c63ff;
+  color: #4256dd;
 }
 
 .about-section h2 {
   font-size: 1.8rem;
-  color: #574fd6;
+  color: #4256dd;
   margin-top: 40px;
   margin-bottom: 15px;
 }
@@ -224,7 +224,7 @@ iframe {
 .contact-container h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, #6c63ff, #574fd6);
+  background: linear-gradient(90deg, #4256dd, #4256dd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -258,7 +258,7 @@ iframe {
 }
 
 .contact-form button {
-  background: #6c63ff;
+  background: #4256dd;
   color: white;
   padding: 1rem;
   border: none;
@@ -270,7 +270,7 @@ iframe {
 }
 
 .contact-form button:hover {
-  background: #574fd6;
+  background: #4256dd;
   transform: scale(1.02);
 }
 
